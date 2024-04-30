@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'black',
-        secondary: 'red-600',
-        lightGrey: 'slate-100',
-        grey:'slate-200',
-        paragraph:'slate-500',
-        red:'red-600',
+        'HeaderBackground': '#F6F6F7',
+        'PrimaryFont': '#222222',
+        'SecondaryFont': '#888888',
+        'BorderLightGrey': '#CCCCCC',
+        'BorderDarkGrey': '#222222',
+        'RequiredSstar':'#C90000',
       },
     },
   },
