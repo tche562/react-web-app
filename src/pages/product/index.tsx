@@ -6,10 +6,8 @@ import { log } from "console";
 
 const Product = () => {
   const dispatch = useDispatch<AppDispatch>();
-    console.log("---------------------");
  
   useMount(() => {
-    console.log("---------");
     dispatch(loadProductInfo());
   });
 
