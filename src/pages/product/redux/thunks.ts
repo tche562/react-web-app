@@ -7,7 +7,6 @@ export const loadProductInfo: any = createAsyncThunk(
     try {
       const result: any = await getProductInfo();
 
-      console.log(result, "result");
       return result;
     } catch (error) {}
   }

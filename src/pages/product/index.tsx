@@ -3,12 +3,12 @@ import { useMount } from "react-use";
 import { loadProductInfo } from "./redux/thunks";
 import { AppDispatch } from "../../utils/types";
 import { log } from "console";
-import { getProductData } from "./redux/selector";
+import { getItemsInCart, getProductData } from "./redux/selector";
 
 const Product = () => {
   const dispatch = useDispatch<AppDispatch>();
   const productData = useSelector(getProductData);
-  console.log(productData);
+  const itemsInCart = useSelector(getItemsInCart);
 
   useMount(() => {
     dispatch(loadProductInfo());
@@ -19,7 +19,7 @@ const Product = () => {
       <div className="flex flex-col">
         <div className=" bg-HeaderBackground lg:mx-20 my-4">
           <div className="flex flex-row-reverse mx-10 lg:mx-40 my-1">
-            <button className="text-slate-500 text-xs">{`My Cart()`}</button>
+            <button className="text-slate-500 text-xs">My Cart ( {itemsInCart.length} )</button>
           </div>
         </div>
         <div>
@@ -49,7 +49,8 @@ const Product = () => {
                 </div>
               </div>
               <div>
-                <button className="border-2 border-BorderDarkGrey text-PrimaryFont px-4 py-2 font-bold hover:text-white hover:bg-BorderDarkGrey">
+                <button className="border-2 border-BorderDarkGrey text-PrimaryFont px-4 py-2 font-bold hover:text-white hover:bg-BorderDarkGrey"
+                onClick={}>
                   {"ADD TO CART"}
                 </button>
               </div>

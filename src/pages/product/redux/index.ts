@@ -8,6 +8,7 @@ const initialState = {
   price: 0,
   imageURL: null,
   sizeOptions: [],
+  itemsInCart: [],
 };
 
 export const { reducer, actions } = createSlice({
