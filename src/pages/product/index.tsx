@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useMount } from "react-use";
 import { loadProductInfo } from "./redux/thunks";
 import { AppDispatch } from "../../utils/types";
-import { log } from "console";
 import { getItemsInCart, getProductData } from "./redux/selector";
 
 const Product = () => {
@@ -29,8 +28,8 @@ const Product = () => {
               
             </div>
             <div className="basis-1/2 flex flex-col">
-              <div className="my-6 text-PrimaryFont text-xl font-sans">{productData.title}</div>
-              <div className="border-y py-2 border-BorderLightGrey text-PrimaryFont text-sm font-bold">
+              <div className="text-PrimaryFont text-xl font-sans my-6">{productData.title}</div>
+              <div className="border-y border-BorderLightGrey text-PrimaryFont text-sm font-bold py-2">
                 ${productData.price}.00
               </div>
               <div className="my-3 text-SecondaryFont text-xs lg:my-6">
@@ -49,7 +48,7 @@ const Product = () => {
                 </div>
               </div>
               <div>
-                <button className="border-2 border-BorderDarkGrey text-PrimaryFont px-4 py-2 font-bold hover:text-white hover:bg-BorderDarkGrey">
+                <button className="border-2 border-BorderDarkGrey text-PrimaryFont font-bold px-4 py-2 hover:text-white hover:bg-BorderDarkGrey">
                   {"ADD TO CART"}
                 </button>
               </div>
