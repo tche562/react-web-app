@@ -49,8 +49,7 @@ const Product = () => {
                 </div>
               </div>
               <div>
-                <button className="border-2 border-BorderDarkGrey text-PrimaryFont px-4 py-2 font-bold hover:text-white hover:bg-BorderDarkGrey"
-                onClick={}>
+                <button className="border-2 border-BorderDarkGrey text-PrimaryFont px-4 py-2 font-bold hover:text-white hover:bg-BorderDarkGrey">
                   {"ADD TO CART"}
                 </button>
               </div>
