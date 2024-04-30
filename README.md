@@ -7,7 +7,9 @@ This it a front-end for a shopping web app. This app is created by using react-r
 ## Environments
 
 -nvm
+
 -node suggested version:16.13.2
+
 -npm
 
 ## Installation
