@@ -23,7 +23,11 @@ export const { reducer, actions } = createSlice({
       (state: any, { payload }) => {
         state.loadProductInfoStatus = API_REQUEST_STATUS.FULFILLED;
         const data = payload.data;
-        console.log(data, "data");
+        state.title = data.title;
+        state.description = data.description;
+        state.price = data.price;
+        state.imageURL = data.imageURL;
+        state.sizeOptions = data.sizeOptions || [];
       }
     );
     builder.addCase(loadProductInfo.rejected.type, (state: any) => {
